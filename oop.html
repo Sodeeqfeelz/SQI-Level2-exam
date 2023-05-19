@@ -5,9 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <input type="text" id="surname" placeholder="Enter student surname">
+        <input type="text" id="name" placeholder="Enter student name">
+        <input type="text" id="department" placeholder="Enter student department">
+        <input type="text" id="year" placeholder="Enter student year of entering">
     </head>
     <body>
         <div id="disp"></div>
+        <button onclick="addStudent()">Add Student</button>
         <script>
             class Students {
                 constructor(surname,name,department,year){
@@ -16,6 +21,10 @@
                     this.department = department;
                     this.year = year;
                 }
+            }
+            const addStudent = ()=>{
+                let student1 = new Students(surname.value,name.value,department.value,year.value)
+                console.log(student1);
             }
             let student1 = new Students('Van','Vivian','Science', '2000')
             let student2 = new Students('Mic','Micheal','computer', '2004')

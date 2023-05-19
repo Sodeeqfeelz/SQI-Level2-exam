@@ -43,6 +43,10 @@
     </div>
     <script>
         let cart = []
+        if(localStorage.ourCart){
+            cart = JSON.parse(localStorage.getItem("ourCart"))
+            console.log(cart)
+        }
         const addTOCart =() =>{
             let carts = {
                 item: user.value,
@@ -60,6 +64,8 @@
                 displayCart()
                 console.log(cart)
             } 
+            localStorage.setItem("ourCart",JSON.stringify(cart))
+                console.log(cart)
         }
 
         const displayCart=() =>{
