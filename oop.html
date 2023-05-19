@@ -5,14 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <input type="text" id="surname" placeholder="Enter student surname">
-        <input type="text" id="name" placeholder="Enter student name">
-        <input type="text" id="department" placeholder="Enter student department">
-        <input type="text" id="year" placeholder="Enter student year of entering">
+        <link rel="stylesheet" href="Bootstrap Ass/bootstrap.css">
     </head>
     <body>
-        <div id="disp"></div>
-        <button onclick="addStudent()">Add Student</button>
+        <div class="col-lg-7 col-md-7 col-sm-9 mt-lg-4 mt-md-4 mt-sm-2 mx-auto shadow rounded p-3">
+            <input type="text" id="surname" placeholder="Enter student surname" class="form-control my-2">
+            <input type="text" id="name" placeholder="Enter student name" class="form-control my-2">
+            <input type="text" id="department" placeholder="Enter student department" class="form-control my-2">
+            <input type="text" id="year" placeholder="Enter student year of entering" class="form-control my-2">
+            <button class="btn btn-success" onclick="addStudent()">Add Student</button>
+            <div id="disp"></div>
+        </div>
         <script>
             class Students {
                 constructor(surname,name,department,year){
@@ -22,10 +25,7 @@
                     this.year = year;
                 }
             }
-            const addStudent = ()=>{
-                let student1 = new Students(surname.value,name.value,department.value,year.value)
-                console.log(student1);
-            }
+
             let student1 = new Students('Van','Vivian','Science', '2000')
             let student2 = new Students('Mic','Micheal','computer', '2004')
             let student3 = new Students('Tom','Tommy','Art', '2007' )
@@ -38,6 +38,11 @@
             let student10 = new Students('Jan','Janet','computer', '2004')
             console.log(student1,student2,student3,student4,student5,student6,student7,student8,student9,student10);
             // console.log(Students)
+
+            // const addStudent = ()=>{
+            //     let student1 = new Students(surname.value,tudent[index]name.value,department.value,year.value)
+            //     console.log(student1);
+            // }
         </script>
     </body>
 </html>
